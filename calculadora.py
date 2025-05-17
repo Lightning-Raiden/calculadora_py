@@ -19,6 +19,12 @@ def mult(a, b):
     return a * b
 
 def div(a, b):
+
+    while b == 0:
+        b = input("Digite um número diferente de zero: ")
+        b = check_int(b)
+        print("")
+    
     return a / b
 
 num1 = input("Digite o primeiro número: ")
@@ -51,4 +57,4 @@ elif operacao == "/":
     print(f"A divisão dos números é igual a: {div(num1, num2)}")
 
 else:
-    print("Algo deu errado! Por favor, tente novamente.")
+    print("Operação inválida! Digite apenas um dos símbolos especificados acima!")
